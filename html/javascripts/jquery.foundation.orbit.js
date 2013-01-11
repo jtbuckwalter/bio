@@ -22,7 +22,7 @@
     defaults: {
       animation: 'horizontal-push',     // fade, horizontal-slide, vertical-slide, horizontal-push, vertical-push
       animationSpeed: 600,              // how fast animations are
-      timer: true,                      // display timer?
+      timer: false,                      // display timer?
       advanceSpeed: 4000,               // if timer is enabled, time between transitions
       pauseOnHover: false,              // if you hover pauses the slider
       startClockOnMouseOut: false,      // if clock should start on MouseOut
@@ -92,20 +92,12 @@
         }
       });
 
-      this.$element.bind('orbit.next', function () {
+      this.$element.bind('orbit.next swipeleft', function () {
         self.shift('next');
       });
 
-      this.$element.bind('orbit.prev', function () {
+      this.$element.bind('orbit.prev swiperight', function () {
         self.shift('prev');
-      });
-
-      this.$element.bind('swipeleft', function () {
-        $(this).trigger('orbit.next');
-      });
-
-      this.$element.bind('swiperight', function () {
-        $(this).trigger('orbit.prev');
       });
 
       this.$element.bind('orbit.goto', function (event, index) {
@@ -298,16 +290,11 @@
         "-o-transform": degreeCSS,
         "-ms-transform": degreeCSS
       });
-      if (reset) {
-        this.degrees = 0;
-        this.$rotator.removeClass('move');
-        this.$mask.removeClass('move');
-      }
       if(this.degrees > 180) {
         this.$rotator.addClass('move');
         this.$mask.addClass('move');
       }
-      if(this.degrees > 360) {
+      if(this.degrees > 360 || reset) {
         this.$rotator.removeClass('move');
         this.$mask.removeClass('move');
         this.degrees = 0;
@@ -386,10 +373,6 @@
         //if caption text is blank, don't show captions
         if ($.trim($(captionLocation).text()).length < 1){
           return false;
-        }
-        // if location selector starts with '#', remove it so we don't see id="#selector"
-        if (captionLocation.charAt(0) == '#') {
-            captionLocation = captionLocation.substring(1, captionLocation.length);
         }
         captionHTML = $(captionLocation).html(); //get HTML from the matching HTML entity
         this.$caption
