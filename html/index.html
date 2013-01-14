@@ -59,7 +59,7 @@
 
 
 
-	<section class="row">
+	<section class="row clear">
 	<div class="twelve columns">
 
 		<div id="featuredContent">
@@ -78,13 +78,13 @@
 	</div><!-- /columns -->
 	</section>
 	
-	<section data-magellan-destination="what" class="row" id="what">	
-
-		<figure class="three columns">
-			<img src="http://placehold.it/200x200">
+	<section data-magellan-destination="what" class="row padded" id="what">	
+		<figure class="three columns offset">
+			<img class="offset" src="images/cancer-patient-circle.png" width="373" height="384" alt="Cancer Patient Circle">
 		</figure>
 
-		<div class="nine columns">
+
+		<div class="tab-container">
 				<dl class="tabs">
 					<dd class="active"><a href="#simple1">What are biologics?</a></dd>
 					<dd><a href="#simple2">Why biologics are effective.</a></dd>
@@ -93,7 +93,7 @@
 				<ul class="tabs-content">
 					<li class="active" id="simple1Tab">
 
-						<h2>Biologics are treatments forcritically ill patients.</h2>
+						<h2>Biologics are treatments for<br/>critically ill patients.</h2>
 						<p>Patients turn to biologics when traditional treatments fail for conditions like cancer, anemia due to chemotherapy, rheumatoid arthritis, Crohn's disease, psoriasis, HIV/AIDS and multiple sclerosis. Biologics provide proteins that healthy individuals have but patients lack, or they target genetic mutations.</p>
 
 					</li>
@@ -115,25 +115,25 @@
 
 
 
-	<section data-magellan-destination="complexity" class="row" id="complexity">
-		
-		<div class="twelve columns">
-			<h2>Biologics aren't like traditional medicine.</h2>
-			<p>Biologics differ from traditional medicine in three key ways: size, complexity and creation process. Large molecule drugs are often used to treat serious illness—like human growth hormone for HIV/AIDS patients—but biologics are in the range of eight times this size. The size of a biologic is related to its complexity as a living, growing entity, making it impossible to precisely manufacture the same way chemical pills are produced.</p>
-	
-			<figure class="chart">
-				<img src ="http://placehold.it/780x540"/ alt="A chart demonstrating the size and complexity of drugs">
-			</figure>
-		</div>
+	<section data-magellan-destination="complexity" class="row extra-padded" id="complexity">
+	<div class="container">
 
+		<div class="twelve columns">
+			<h2 class="extra-margin center">Biologics aren't like traditional medicine.</h2>
+			<p class="extra-margin two-col-text">Biologics differ from traditional medicine in three key ways: size, complexity and creation process. Large molecule drugs are often used to treat serious illness—like human growth hormone for HIV/AIDS patients—but biologics are in the range of eight times this size. The size of a biologic is related to its complexity as a living, growing entity, making it impossible to precisely manufacture the same way chemical pills are produced.</p>
+	
+				<img src ="images/chart.png"/ alt="A chart demonstrating the size and complexity of drugs">
+		</div>
+		
+	</div><!-- container -->
 	</section><!-- /#complexity -->
 
 
 
-	<section data-magellan-destination="vs"  class="row" id="vs">
-
+	<section data-magellan-destination="vs"  class="row extra-padded" id="vs">
+		<h2 class="extra-margin center">Similar is not the same.</h2>
 		<div class="row">
-		<div class="six columns">
+		<div class="five columns">
 				<figure>
 					<img src="http://placehold.it/218x206"/>
 				</figure>
@@ -163,7 +163,7 @@
 				<h3>Substitutions should be monitored.</h3>
 				<p>Transparency about substitution is critical for monitoring effects on patients. Both physiciansand patients should be notified about a substitution, and pharmacists should keep records of substitutions in order to accurately track adverse reactions.</p>
 			</div>
-			<div class="six columns">
+			<div class="five columns">
 					<figure>
 						<img src="http://placehold.it/317x235"/>
 					</figure>
@@ -174,7 +174,7 @@
 
 	<footer>
 	
-		<section class="row" data-magellan-destination="learn">
+		<section class="row padded" data-magellan-destination="learn">
 		<div class="twelve columns">
 			<h2>Like biologics themselves, this issue is complex.</h2>
 			<p><a href="http://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button" target="_blank">Rock My World!</a></p>
@@ -230,7 +230,6 @@
 	<!-- Included JS Files (Uncompressed) -->
 	<!--
 	<script src="javascripts/jquery.foundation.orbit.js"></script>
-	<script src="javascripts/jquery.foundation.tabs.js" type="text/javascript" charset="utf-8"></script>
 	<script src="javascripts/jquery.foundation.magellan.js"></script>
 	<script src="javascripts/jquery.js"></script>
 	<script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script>
@@ -240,7 +239,7 @@
 	<script src="javascripts/jquery.foundation.buttons.js"></script>
 	<script src="javascripts/jquery.foundation.tooltips.js"></script>
 	<script src="javascripts/jquery.foundation.accordion.js"></script>
-	script src="javascripts/jquery.placeholder.js"></script>
+	<script src="javascripts/jquery.placeholder.js"></script>
 	<script src="javascripts/jquery.foundation.alerts.js"></script>
 	<script src="javascripts/jquery.foundation.topbar.js"></script>
 	<script src="javascripts/jquery.foundation.joyride.js"></script>
@@ -250,6 +249,7 @@
 	<!-- Included JS Files (Compressed) -->
 	<script src="javascripts/jquery.js"></script>
 	<script src="javascripts/foundation.min.js"></script>
+	<script src="javascripts/jquery.foundation.tabs.js" type="text/javascript" charset="utf-8"></script>
 
 	<!-- Initialize JS Plugins -->
 	<script src="javascripts/app.js"></script>
@@ -260,5 +260,7 @@
 	    $('#featuredContent').orbit({ fluid: '16x6' });
 	});
 	</script>
+	
+	
 </body>
 </html>
