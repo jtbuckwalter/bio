@@ -349,18 +349,31 @@ h3, h4, h5, h6 {
 	em {
 		font-family:'GillSansW04-LightItalic';
 	}
-
-
-}
-.extra-margin {
-	margin:0 0 1em 0;
 }
 
-.center {
-	text-align:center;
-}
+	/* .04.01 type modifiers -----*/
+
+	.extra-margin {
+		margin:0 0 1em 0;
+	}
+
+	.center {
+		text-align:center;
+	}
+
+	p.two-col-text {
+		-moz-column-count: 2;
+		-moz-column-gap: 1.25em;
+		-webkit-column-count: 2;
+		-webkit-column-gap: 1.25em;
+		column-count: 2;
+		column-gap: 1.25em;
+	}
+
 
 /* .05 - ##layoutstyles -----*/
+
+/* .05.01 structure  -----*/
 
 
 body {
@@ -371,10 +384,32 @@ body {
 	background: url('../images/pattern-squares-yellow.png') repeat scroll top left;
 }
 
-.clear {
-	clear:both;
+
+section {
+	background:white;
+	margin:0 auto 4.04em !important;
 }
 
+section.no-bkgd {
+	background:none;
+	padding:0;
+}
+
+figure.offset {
+	
+	max-height:1px;
+
+	img.offset {
+	max-width: inherit;
+	position: relative;
+	top: -6em;
+	left: -6em;
+	}
+
+}
+
+
+/* .05.01.01 header/nav  -----*/
 
 header {
 	width:100%;
@@ -415,7 +450,43 @@ header {
 	
 }
 
+/* .05.02 Orbit Rotator  -----*/
+
+/*
+
+CSS for jQuery Orbit Plugin 1.4.0 Maintained for Foundation.
+foundation.zurb.com Free to use under the MIT license.
+http://www.opensource.org/licenses/mit-license.php
+
+*** NOTE: The CSS for Orbit has been modified for use on this site.
+
+*/
+
+/* Container ---------------------- */
+.orbit-wrapper { width: 1px; height: 1px; position: relative; }
+.orbit-wrapper {height:14em !important;}
+.orbit { width: 1px; height: 1px; position: relative; overflow: hidden; }
+.orbit.with-bullets { margin-bottom: 40px; }
+.orbit .orbit-slide { max-width: 100%; position: absolute; top: 0; left: 0; }
+.orbit a.orbit-slide { border: none; line-height: 0; display: none; }
+.orbit div.orbit-slide { width: 100%; height: 100%; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
+
+
+/* Directional Nav ---------------------- */
+div.orbit-wrapper div.slider-nav { display: block; }
+div.orbit-wrapper div.slider-nav span { width: 39px; height: 50px; text-indent: -9999px; position: absolute; z-index: 30; top: 50%; margin-top: -25px; cursor: pointer; }
+div.orbit-wrapper div.slider-nav span.right { background: url('../images/foundation/orbit/right-arrow.png'); background-size: 100%; right: 0; }
+div.orbit-wrapper div.slider-nav span.left { display:hidden; }
+
+.lt-ie9 div.orbit-wrapper div.slider-nav span.right { background: url('../images/foundation/orbit/right-arrow-small.png'); }
+.lt-ie9 div.orbit-wrapper div.slider-nav span.left { background: url('../images/foundation/orbit/left-arrow-small.png'); }
+
+/* Fluid Layout ---------------------- */
+div.orbit img.fluid-placeholder { visibility: hidden; position: static; display: block; width: 100%; }
+div.orbit, div.orbit-wrapper { width: 100% !important; }
+
 #featuredContent {
+	margin:0 auto 6em auto !important;
 	p {
 		font-size:1.5em;
 		font-family:'Gill Sans W04 Light';
@@ -431,105 +502,19 @@ header {
 		margin:0 1em 0 0;
 		text-indent:-1000000px;
 		float:left;
-	}
-	
+	}	
 }
 
 
-section.clear {
-	background:none;
-	margin:0 auto 6em auto !important;
-	padding:0;
-}
+/* .05.03 structural elements  -----*/
 
 
-section {
-	background:white;
-	margin:0 auto 4.04em !important;
-}
+/* .05.04 Tabs  -----*/
 
 .tab-container {
 	width: 62.382979%;
 	float: right;
 }
-
-figure.offset {
-	
-	max-height:1px;
-
-	img.offset {
-	max-width: inherit;
-	position: relative;
-	top: -6em;
-	left: -6em;
-	}
-}
-
-p.two-col-text {
-	-moz-column-count: 2;
-	-moz-column-gap: 1.25em;
-	-webkit-column-count: 2;
-	-webkit-column-gap: 1.25em;
-	column-count: 2;
-	column-gap: 1.25em;
-}
-
-
-/* CSS for jQuery Orbit Plugin 1.4.0 Maintained for Foundation. foundation.zurb.com Free to use under the MIT license. http://www.opensource.org/licenses/mit-license.php
-*/
-/* Container ---------------------- */
-.orbit-wrapper { width: 1px; height: 1px; position: relative; }
-.orbit-wrapper {height:14em !important;}
-.orbit { width: 1px; height: 1px; position: relative; overflow: hidden; }
-.orbit.with-bullets { margin-bottom: 40px; }
-.orbit .orbit-slide { max-width: 100%; position: absolute; top: 0; left: 0; }
-.orbit a.orbit-slide { border: none; line-height: 0; display: none; }
-.orbit div.orbit-slide { width: 100%; height: 100%; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
-
-/* Note: If your slider only uses content or anchors, you're going to want to put the width and height declarations on the ".orbit>div" and "div.orbit>a" tags in addition to just the .orbit-wrapper */
-/* Timer ---------------------- */
-div.orbit-wrapper div.timer { width: 40px; height: 40px; overflow: hidden; position: absolute; top: 10px; right: 10px; opacity: .6; cursor: pointer; z-index: 31; }
-div.orbit-wrapper span.rotator { display: block; width: 40px; height: 40px; position: absolute; top: 0; left: -20px; background: url('../images/foundation/orbit/rotator-black.png') no-repeat; z-index: 3; }
-div.orbit-wrapper span.rotator.move { left: 0; }
-div.orbit-wrapper span.mask { display: block; width: 20px; height: 40px; position: absolute; top: 0; right: 0; z-index: 2; overflow: hidden; }
-div.orbit-wrapper span.mask.move { width: 40px; left: 0; background: url('../images/foundation/orbit/timer-black.png') repeat 0 0; }
-div.orbit-wrapper span.pause { display: block; width: 40px; height: 40px; position: absolute; top: 0; left: 0; background: url('../images/foundation/orbit/pause-black.png') no-repeat; z-index: 4; opacity: 0; }
-div.orbit-wrapper span.pause.active { background: url('../images/foundation/orbit/pause-black.png') no-repeat 0 -40px; }
-div.orbit-wrapper div.timer:hover span.pause, div.orbit-wrapper span.pause.active { opacity: 1; }
-
-/* Captions ---------------------- */
-.orbit-caption { display: none; font-family: inherit; }
-
-.orbit-wrapper .orbit-caption { background: black; background: rgba(0, 0, 0, 0.6); z-index: 30; color: white; text-align: center; padding: 7px 0; font-size: 13px; position: absolute; right: 0; bottom: 0; width: 100%; }
-
-/* Directional Nav ---------------------- */
-div.orbit-wrapper div.slider-nav { display: block; }
-div.orbit-wrapper div.slider-nav span { width: 39px; height: 50px; text-indent: -9999px; position: absolute; z-index: 30; top: 50%; margin-top: -25px; cursor: pointer; }
-div.orbit-wrapper div.slider-nav span.right { background: url('../images/foundation/orbit/right-arrow.png'); background-size: 100%; right: 0; }
-div.orbit-wrapper div.slider-nav span.left { display:hidden; }
-
-.lt-ie9 div.orbit-wrapper div.slider-nav span.right { background: url('../images/foundation/orbit/right-arrow-small.png'); }
-.lt-ie9 div.orbit-wrapper div.slider-nav span.left { background: url('../images/foundation/orbit/left-arrow-small.png'); }
-
-/* Bullet Nav ---------------------- */
-ul.orbit-bullets { position: absolute; z-index: 30; list-style: none; bottom: -40px; left: 50%; margin-left: -50px; padding: 0; }
-ul.orbit-bullets li { float: left; margin-left: 5px; cursor: pointer; color: #999999; text-indent: -9999px; background: url('../images/foundation/orbit/bullets.jpg') no-repeat 4px 0; width: 13px; height: 12px; overflow: hidden; }
-ul.orbit-bullets li.active { color: #222222; background-position: -8px 0; }
-ul.orbit-bullets li.has-thumb { background: none; width: 100px; height: 75px; }
-ul.orbit-bullets li.active.has-thumb { background-position: 0 0; border-top: 2px solid black; }
-
-/* Orbit Slide Counter */
-.orbit-slide-counter { position: absolute; bottom: 0; z-index: 99; background: rgba(0, 0, 0, 0.7); color: white; padding: 5px; }
-
-/* Fluid Layout ---------------------- */
-div.orbit img.fluid-placeholder { visibility: hidden; position: static; display: block; width: 100%; }
-
-div.orbit, div.orbit-wrapper { width: 100% !important; }
-
-.timer {display:hidden;}
-
-/* Tabs ---------------------- */
-
 
 .tabs { font-family:'Gill Sans W04 Light'; color:@grey; list-style: none; display: block; height: 2em; padding: 0; margin-bottom: 2.5em; }
 .tabs.contained { margin-bottom: 0; margin-left: 0; }
@@ -540,11 +525,30 @@ div.orbit, div.orbit-wrapper { width: 100% !important; }
 .tabs dd.active a, .tabs li.active a { cursor: default; color: @gold; background: #fff; }
 .tabs dd:first-child, .tabs li:first-child { margin-left: 0; }
 
-ul.tabs-content { display: block; height:13em; margin: 0 0 2em; padding: 0; }
+ul.tabs-content { display: block; min-height:13em; margin: 0 0 2em; padding: 0; }
 ul.tabs-content > li { display: none; }
 ul.tabs-content > li.active { display: block; }
 
 .no-js ul.tabs-content > li { display: block; }
+
+
+/* .05.05 Footer  -----*/
+
+
+.white-band {
+	width:100%;
+	padding:4em 0 1em 0;
+	background:white;
+}
+.grey-band {
+	width:100%;
+	padding:4em 0 1em 0;
+	background:white url('../images/pattern-squares-lt-grey.png') scroll top left;
+}
+
+/* Tabs ---------------------- */
+
+
 
 
 
