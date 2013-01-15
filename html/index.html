@@ -4,49 +4,47 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8" />
+	<meta charset="utf-8" />
 
-  <!-- Set the viewport width to device width for mobile -->
-  <meta name="viewport" content="width=device-width" />
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
 
-  <title>Welcome to Foundation</title>
-  
-  <!-- Included CSS Files (Uncompressed) --> 
-  <!-- <link rel="stylesheet" href="stylesheets/foundation.css"> -->
- 
-  
-  <!-- Included CSS Files (Compressed) -->
-  <!-- <link rel="stylesheet" href="stylesheets/foundation.css"> -->
-  <link rel="stylesheet" href="stylesheets/app.css">
-  <link rel="stylesheet" href="less/styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<title>Welcome to Foundation</title>
 
-  <script src="javascripts/modernizr.foundation.js"></script>
+	<!-- Included CSS Files (Uncompressed) --> 
+	<!-- <link rel="stylesheet" href="stylesheets/foundation.css"> -->
 
-  <!-- Fonts.com Webfonts -->
-  <link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/40594ca0-2686-4fb1-9b48-8cce7cdf48a6.css"/>
 
+	<!-- Included CSS Files (Compressed) -->
+	<!-- <link rel="stylesheet" href="stylesheets/foundation.css"> -->
+	<link rel="stylesheet" href="stylesheets/app.css">
+	<link rel="stylesheet" href="less/styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+	<script src="javascripts/modernizr.foundation.js"></script>
+
+	<!-- Fonts.com Webfonts -->
+	<link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/40594ca0-2686-4fb1-9b48-8cce7cdf48a6.css"/>
+	<script type="text/javascript" src="http://fast.fonts.com/jsapi/40594ca0-2686-4fb1-9b48-8cce7cdf48a6.js"></script>
 
 </head>
 <body>
-<div id="pagewrap">
 
-	<header>
+	<nav class="sub-nav">
+		<dl>
+		  <dd><a href="resources.html">Resources</a></dd>
+		  <dd><a href="about.html">About</a></dd>
+		  <dd><a href="contact.html">Contact</a></dd>
+		</dl>
+	</nav>
+
+	<header data-magellan-expedition="fixed">
 		<div class="row">
-		<!--
-		<nav>
-			<dl class="sub-nav">
-			  <dd class="active"><a href="resources.html">Resources</a></dd>
-			  <dd><a href="about.html">About</a></dd>
-			  <dd><a href="contact.html">Contact</a></dd>
-			</dl>
-		</nav>
-		-->
 
-		<h1 class="panel three columns"><img src="http://placehold.it/153x72" alt="Discovering Cures Logo"></h1>
+		<h1 class="panel three columns"><img src="images/discovering-cures-logo.png" alt="Discovering Cures Logo"></h1>
 
-		<nav class="eight columns">
+		<nav class="nine columns">
 
-			<ul class="nav-bar" data-magellan-expedition="fixed">
+			<ul class="nav-bar">
 				<li data-magellan-arrival='what'><a href="#what">What are Biolgics?</a></li>
 				<li data-magellan-arrival='complexity'><a href="#complexity">Complexity</a></li>
 				<li data-magellan-arrival='vs'><a href="#vs">Biologics Vs. Biosimilars</a></li>
@@ -58,19 +56,20 @@
 	</header>
 
 
+	<div id="pagewrap">
 
-	<section class="row no-bkgd">
+	<section class="row no-bkgd lg-margin">
 	<div class="twelve columns">
 
 		<div id="featuredContent">
 			<div>
 				<h1>Similar is Not the Same.</h1>
-				<a href="#what" class="button" target="_blank">Move Down</a>
+				<a href="#what" class="circle-button" target="_blank">Move Down</a>
 				<p>Biologics are helping severely ill patient fight difficult-to-treat disease.Biosimilars, however, are exactly what they sound like—similar to biologics,but not the same. It's a difference that matters for patient safety.</p>
 			</div>
 			<div>
-				<h1>We can include text and buttons, like this!</h2>
-				<a href="http://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button" target="_blank">Rock My World!</a>
+				<h1>This is a headline!</h2>
+				<a href="http://www.youtube.com/watch?v=dQw4w9WgXcQ" class="circle-button" target="_blank">Rock My World!</a>
 				<p>We take no responsibility for what happens if you click this button.</p>
 			</div>
 		</div><!-- /#featuredContent -->
@@ -135,10 +134,10 @@
 		<div class="row">
 		<div class="five columns">
 				<figure>
-					<img src="http://placehold.it/218x206"/>
+					<img src="images/microscope.jpg" width="220" height="208" alt="Microscope">
 				</figure>
 				<figure>
-					<img src="http://placehold.it/317x235"/>
+					<img src="images/icecube-v-snowflake.jpg" width="322" height="240" alt="Icecube V Snowflake">
 				</figure>
 		</div>
 		<div class="six columns">
@@ -164,8 +163,8 @@
 				<p>Transparency about substitution is critical for monitoring effects on patients. Both physiciansand patients should be notified about a substitution, and pharmacists should keep records of substitutions in order to accurately track adverse reactions.</p>
 			</div>
 			<div class="five columns">
-					<figure>
-						<img src="http://placehold.it/317x235"/>
+					<figure class="offset">
+						<img src="images/doctor-and-patient.png" width="471" height="537" class="offset2" alt="Doctor And Patient">
 					</figure>
 			</div>
 
@@ -177,28 +176,30 @@
 		<div class="white-band">
 			<section class="row" data-magellan-destination="learn">
 			<div class="twelve columns">
-				<h2 class="center">Like biologics themselves, this issue is complex.</h2>
-				<p class="center"><a href="http://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button" target="_blank">Rock My World!</a></p>
+				<h2 class="center extra-margin">Like biologics themselves, this issue is complex.</h2>
+				<p class="center"><a href="http://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button" target="_blank">Learn More</a></p>
 			</div>
 			</section>
 		</div><!-- /white-band -->
 
 		<div class="grey-band">
 
-			<section class="row no-bkgd">
-				<div class="four columns">
-					<h3>Sign up for alerts<br/>regarding Biologics.</h3>
+			<section class="row no-bkgd extra-margin">
+				<div class="form-box">
 					<form>
+						<h3 class="">Sign up for alerts<br/>regarding Biologics.</h3>
+
 						<label>First name</label>
-						<input type="text" placeholder="First Name" />
+						<input type="text" class="input" placeholder="First Name" />
 						<label>Last name</label>
-						<input type="text" placeholder="Last Name" />
+						<input type="text" class="input" placeholder="Last Name" />
 						<label>Email</label>
-						<input type="text" placeholder="Email" />
+						<input type="text" class="input" placeholder="Email" />
+						<input type="submit" class="button sm-btn center"/>
 					</form>
 				</div>
 
-				<div class="eight columns">
+				<div class="events">
 					<h2 class="extra-margin">Upcoming Events</h2>
 					<div class="six columns">
 						<h4>Biologics vs. Biosimilars Forum</h4>
@@ -213,22 +214,22 @@
 						<p>Fusce dapibus, tellus ac cursus commodo tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 					</div>
 				</div>
-
-				<hr/>
-
-				<nav class="nine columns">
-					<dl class="sub-nav">
-					  <dd><a href="resources.html">Resources</a></dd>
-					  <dd><a href="about.html">About</a></dd>
-					  <dd><a href="contact.html">Contact</a></dd>
-					</dl>
-				</nav>
-				<p class="three columns">&copy; 2013 Discovering Cures</p>
-
 			</section>
+			
+			<section class="row no-bkgd">
+					<nav class="nine columns">
+						<dl class="sub-nav">
+						  <dd><a href="resources.html">Resources</a></dd>
+						  <dd><a href="about.html">About</a></dd>
+						  <dd><a href="contact.html">Contact</a></dd>
+						</dl>
+					</nav>
+					<p class="three columns">&copy; 2013 Discovering Cures</p>
+			</section>
+
 		</div><!-- /grey-band -->
 
-	
+		
 	</footer>
 <div class="clear"></div>
 </div>
@@ -236,7 +237,6 @@
 	<!-- Included JS Files (Uncompressed) -->
 	<!--
 	<script src="javascripts/jquery.foundation.orbit.js"></script>
-	<script src="javascripts/jquery.foundation.magellan.js"></script>
 	<script src="javascripts/jquery.js"></script>
 	<script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script>
 	<script src="javascripts/jquery.foundation.forms.js"></script>
@@ -259,8 +259,9 @@
 
 	<!-- Initialize JS Plugins -->
 	<script src="javascripts/app.js"></script>
+	<script src="javascripts/jquery.foundation.magellan.js"></script>
 
-
+	
 	<script type='text/javascript'>
 	$(window).load(function() {
 	    $('#featuredContent').orbit({ fluid: '16x6' });

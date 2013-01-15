@@ -63,7 +63,7 @@
           if (fixed_position) {
             $expedition.css({position:"fixed", top:0});
           } else {
-            $expedition.css({position:"", top:""});
+            $expedition.css({position:"relative", top:"0"});
           }
         }
       });
